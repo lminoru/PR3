@@ -1,0 +1,12 @@
+F:\Técnico\4º semestre\PR3\projeto\Business\bin\Debug\Business.dll
+F:\Técnico\4º semestre\PR3\projeto\Business\bin\Debug\Business.pdb
+F:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+F:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.dll
+F:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.pdb
+E:\Técnico\4º semestre\PR3\projeto\Business\bin\Debug\Business.dll
+E:\Técnico\4º semestre\PR3\projeto\Business\bin\Debug\Business.pdb
+E:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+E:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+E:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.dll
+E:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.pdb
+F:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
