@@ -1704,3 +1704,8 @@ a {
 .w3-border-pale-blue, .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff !important
 }
+
+.btn_consulta{
+    position: center;
+    color: red;
+}

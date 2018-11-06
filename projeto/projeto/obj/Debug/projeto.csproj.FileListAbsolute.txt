@@ -79,4 +79,5 @@ F:\Técnico\4º semestre\PR3\projeto\projeto\bin\Business.dll
 F:\Técnico\4º semestre\PR3\projeto\projeto\bin\Business.pdb
 E:\Técnico\4º semestre\PR3\projeto\projeto\bin\Business.dll
 E:\Técnico\4º semestre\PR3\projeto\projeto\bin\Business.pdb
-F:\Técnico\4º semestre\PR3\projeto\projeto\obj\Debug\projeto.csprojResolveAssemblyReference.cache
+F:\Técnico\4º semestre\PR3\projeto\projeto\obj\Debug\projeto.csprojAssemblyReference.cache
+F:\Técnico\4º semestre\PR3\projeto\projeto\obj\Debug\projeto.csproj.CopyComplete

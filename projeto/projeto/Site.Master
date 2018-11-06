@@ -71,6 +71,7 @@
                         <li><a runat="server" href="~/CadastroAcesso">Cadastrar</a></li>
                         <li><a runat="server" href="~/CadastroMedico">Medico</a></li>
                         <li><a runat="server" href="~/CadastroEspecialidade">Especialidade</a></li>
+                        <li><a runat="server" href="~/CadastrarConsulta">Consulta</a></li>
                         <li><a runat="server" href="#" onserverclick="deslogar_ServerClick">Sair</a></li>
                         
                         
