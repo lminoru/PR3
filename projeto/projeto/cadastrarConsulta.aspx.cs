@@ -13,5 +13,10 @@ namespace projeto
         {
 
         }
+
+        protected void bd_consulta_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }
