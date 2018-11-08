@@ -31,15 +31,6 @@ namespace projeto {
         protected global::System.Web.UI.WebControls.SqlDataSource bd_medico;
         
         /// <summary>
-        /// Controle btn_consulta.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_consulta;
-        
-        /// <summary>
         /// Controle GridView1.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace projeto {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource bd_consulta;
+        
+        /// <summary>
+        /// Controle btn_consulta.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_consulta;
     }
 }
