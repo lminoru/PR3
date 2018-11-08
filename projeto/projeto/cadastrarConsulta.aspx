@@ -12,7 +12,7 @@
 
                    <h1>CONSULTAS</h1>
 
-                    <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf">
+                    <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf" AutoPostBack="True">
                     </asp:DropDownList>
 
                     <asp:SqlDataSource ID="bd_medico" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Medico]"></asp:SqlDataSource>
@@ -26,7 +26,7 @@
                         <Columns>
                             <asp:BoundField DataField="dia" DataFormatString="{0: dd/MM/yyyy}" HeaderText="dia" SortExpression="dia" />
                             <asp:BoundField DataField="horario" HeaderText="horario" SortExpression="horario" />
-                            <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
+                            <asp:BoundField DataField="nome" HeaderText="paciente" SortExpression="nome" />
                         </Columns>
                    </asp:GridView>
                    <asp:SqlDataSource ID="bd_consulta" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico=@id_medico">
@@ -34,6 +34,36 @@
                            <asp:ControlParameter ControlID="ddl_medico" Name="id_medico" PropertyName="SelectedValue" />
                        </SelectParameters>
                    </asp:SqlDataSource>
+                    
+                   <table>
+                            <tr>
+                                <td>
+                                    <!--nome-->  
+					                <div class="input-field col m12 s12">
+                                        <asp:TextBox ID="txtDia" runat="server" TextMode="Date" style="display:block;"></asp:TextBox>
+                                        <label for="txtDia">Dia</label>
+					                </div>
+                                </td>
+
+                                <td>
+                                    <!--cpf-->
+					                <div class="input-field col m12 s12">
+                                        <asp:TextBox ID="txtHorario" runat="server" TextMode="Time" style="display:block;"></asp:TextBox>
+					                    <label for="txtHorario">Horário</label>
+					                </div>
+                                </td>
+
+                                <td>
+                                    <!--cpf-->
+					                <div class="input-field col m12 s12">
+                                        <asp:TextBox ID="txtIdpaciente" runat="server" style="display:block;"></asp:TextBox>
+					                    <label for="txtIdpaciente">Paciente</label>
+					                </div>
+                                </td>
+                            </tr>
+                   
+                   
+                   
                    <br />
 
 

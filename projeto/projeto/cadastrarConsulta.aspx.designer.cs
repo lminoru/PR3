@@ -49,6 +49,33 @@ namespace projeto {
         protected global::System.Web.UI.WebControls.SqlDataSource bd_consulta;
         
         /// <summary>
+        /// Controle txtDia.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDia;
+        
+        /// <summary>
+        /// Controle txtHorario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHorario;
+        
+        /// <summary>
+        /// Controle txtIdpaciente.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIdpaciente;
+        
+        /// <summary>
         /// Controle btn_consulta.
         /// </summary>
         /// <remarks>
