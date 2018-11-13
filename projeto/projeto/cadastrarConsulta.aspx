@@ -8,7 +8,7 @@
         <div class="w3-row-padding">
             <!-- CADASTRAR -->
             <div class="w3-container w3-card w3-white w3-margin-bottom">
-                
+                <CENTER>
 
                    <h1>CONSULTAS</h1>
 
@@ -38,18 +38,18 @@
                    <table>
                             <tr>
                                 <td>
-                                    <!--nome-->  
+                                    <!--dia-->  
 					                <div class="input-field col m12 s12">
-                                        <asp:TextBox ID="txtDia" runat="server" TextMode="Date" style="display:block;" OnTextChanged="txtDia_TextChanged"></asp:TextBox>
-                                        <label for="txtDia">Dia</label>
+                                        <asp:TextBox ID="txtDia" runat="server" TextMode="Date" style="display:block;" OnTextChanged="txtDia_TextChanged" AutoPostBack="True"></asp:TextBox>
+                                        <!--<label for="txtDia">Dia</label>-->
 					                </div>
                                 </td>
 
                                 <td>
-                                    <!--cpf-->
+                                    <!--horario-->
 					                <div class="input-field col m12 s12">
                                         
-					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" EnableViewState="False">
+					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" EnableViewState="False" AutoPostBack="True" Enabled="False">
                                             <asp:ListItem>09:00</asp:ListItem>
                                             <asp:ListItem>09:30</asp:ListItem>
                                             <asp:ListItem>10:00</asp:ListItem>
@@ -68,30 +68,28 @@
                                 </td>
 
                                 <td>
-                                    <!--cpf-->
+                                    <!---paciente-->
 					                <div class="input-field col m12 s12">
-                                        <asp:DropDownList ID="ddl_pacientes" runat="server" style="display:block" DataSourceID="bd_paciente" DataTextField="nome" DataValueField="cpf">
+                                        <asp:DropDownList ID="ddl_pacientes" runat="server" style="display:block" DataSourceID="bd_paciente" DataTextField="nome" DataValueField="cpf" AutoPostBack="True">
                                         </asp:DropDownList>
 					                    <asp:SqlDataSource ID="bd_paciente" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Paciente] ORDER BY [nome]"></asp:SqlDataSource>
 					                </div>
                                 </td>
                             </tr>
                    
-                   
-                   
+                   </table>
                    <br />
 
+                    <!--botao cadastrar-->    
+				    <div class="row">
+                        <asp:Button ID="btn_consulta" class="btn waves-effect waves-light" runat="server" Text="nova consulta" style="position:relative" OnClick="btn_consulta_Click" />
+                    </div>
 
-                    
-                    
-
-                  
-                    <asp:Button ID="btn_consulta" runat="server" Text="nova consulta" />
 
                 
                 
 
-                  
+                </CENTER>  
             </div>
             <!-- FIM CADASTRAR-->
 
@@ -101,6 +99,10 @@
         </div>
   
     <!-- End Page Container -->
+    </div>
+
+    </div>
+
     </div>
 
     </div>

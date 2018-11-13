@@ -15,28 +15,26 @@ namespace projeto
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
-        protected void bd_consulta_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
 
-        }
 
         protected void txtDia_TextChanged(object sender, EventArgs e)
         {
-            
-            if (txtDia.Text == DateTime.Now.ToShortDateString())
+            zerarDDL_horarios(); //zerar ddl horarios
+            if (txtDia.Text == "" || Convert.ToDateTime(txtDia.Text) < DateTime.Now.Date) //datas validas
             {
-                this.ExibirAlerta(Mensagem.tipoMensagem.Alerta, "Data incorreta");
+                this.ExibirAlerta(Mensagem.tipoMensagem.Alerta, "Data inválida");
                 ddl_horarios.Enabled = false;
                 return;//sai
             }
             //else
 
-            zerarDDL_horarios();
             inserirHorasDisponiveis();   
         }
+
+
+
 
         protected void inserirHorasDisponiveis()
         {
@@ -60,7 +58,33 @@ namespace projeto
             }
         }
 
-
-
+        protected void btn_consulta_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDateTime(txtDia.Text) >= DateTime.Now.Date )
+            {
+                //data validada
+                if (ddl_horarios.Enabled == true && Convert.ToDateTime(ddl_horarios.Text) >= DateTime.Now)
+                {
+                    //há horários disponíveis
+                    if (registerService.cadastrarConsultaMedica(ddl_medico.SelectedValue, ddl_pacientes.SelectedValue, txtDia.Text, ddl_horarios.SelectedValue))
+                    {
+                        //cadastro de consulta realizado com sucesso
+                        this.ExibirAlerta(Mensagem.tipoMensagem.Sucesso, "Operação realizada com êxito");
+                    }
+                    else
+                    {
+                        this.ExibirAlerta(Mensagem.tipoMensagem.Erro, "Não foi possível realizar esta operação");
+                    }
+                }
+                else
+                {
+                    this.ExibirAlerta(Mensagem.tipoMensagem.Alerta, "Não há horários disponíveis para esse dia");
+                }
+            }
+            else
+            {
+                this.ExibirAlerta(Mensagem.tipoMensagem.Alerta, "Data inválida");
+            }
+        }
     }
 }

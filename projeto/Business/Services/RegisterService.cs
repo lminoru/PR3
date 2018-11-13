@@ -212,6 +212,36 @@ namespace Business.Services
 
         }
 
+        public bool cadastrarConsultaMedica(string id_med, string id_pac, string dia, string horario)
+        {
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
+
+            query.Append(" INSERT INTO ConsultaMedica");
+            query.Append(" VALUES (");
+            query.AppendFormat(" '{0}', ", id_med);
+            query.AppendFormat(" '{0}', ", id_pac);
+            query.AppendFormat(" '{0}', ", dia);
+            query.AppendFormat(" '{0}', ", horario);
+            query.AppendFormat(" '{0}', ", "PENDENTE");
+            query.AppendFormat(" '{0}', ", "NENHUM_");
+            query.AppendFormat("  {0}) ", 0);
+
+            Query executar = session.CreateQuery(query.ToString());
+
+            try
+            {
+                executar.ExecuteNonQuery();
+            }
+            catch
+            {
+                return false;  //insercao nao deu certo
+            }
+
+            return true;       //insercao deu certo
+
+        }
+
 
         //metodos para devolver algo
         public String[] horariosOcupados(String data)
