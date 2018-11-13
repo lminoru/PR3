@@ -213,5 +213,35 @@ namespace Business.Services
         }
 
 
+        //metodos para devolver algo
+        public String[] horariosOcupados(String data)
+        {
+            String[] ocupados = new String[13]; //no maximo 12 horarios + a qtd 
+
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
+
+            query.Append(" SELECT u.horario");
+            query.Append(" FROM ConsultaMedica u  ");
+            query.Append(" WHERE (1=1)    ");
+            query.AppendFormat(" AND u.dia = '{0}'", data);
+
+            Query executar = session.CreateQuery(query.ToString());
+            IDataReader reader = executar.ExecuteQuery();
+
+            //verificar se ele encontrou algum registro no banco de dados
+            int i = 0;
+            while(reader.Read())
+            {
+                ocupados[i] = reader["horario"].ToString();
+                i++;    
+
+            }
+
+            ocupados[12] = i + ""; //qtd de horarios ocupados (conversão int to string)
+            return ocupados;
+        }
+
+
     }
 }

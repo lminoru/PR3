@@ -1709,3 +1709,7 @@ a {
     position: center;
     color: red;
 }
+
+.cad_consulta_paciente{
+    width: 60%;
+}

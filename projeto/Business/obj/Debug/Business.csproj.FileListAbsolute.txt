@@ -15,4 +15,4 @@ D:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csprojResolveAs
 D:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 D:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.dll
 D:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.pdb
-F:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+F:\Técnico\4º semestre\PR3\projeto\Business\obj\Debug\Business.csprojAssemblyReference.cache

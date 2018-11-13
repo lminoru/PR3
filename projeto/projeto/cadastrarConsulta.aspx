@@ -40,7 +40,7 @@
                                 <td>
                                     <!--nome-->  
 					                <div class="input-field col m12 s12">
-                                        <asp:TextBox ID="txtDia" runat="server" TextMode="Date" style="display:block;"></asp:TextBox>
+                                        <asp:TextBox ID="txtDia" runat="server" TextMode="Date" style="display:block;" OnTextChanged="txtDia_TextChanged"></asp:TextBox>
                                         <label for="txtDia">Dia</label>
 					                </div>
                                 </td>
@@ -48,16 +48,31 @@
                                 <td>
                                     <!--cpf-->
 					                <div class="input-field col m12 s12">
-                                        <asp:TextBox ID="txtHorario" runat="server" TextMode="Time" style="display:block;"></asp:TextBox>
-					                    <label for="txtHorario">Horário</label>
+                                        
+					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" EnableViewState="False">
+                                            <asp:ListItem>09:00</asp:ListItem>
+                                            <asp:ListItem>09:30</asp:ListItem>
+                                            <asp:ListItem>10:00</asp:ListItem>
+                                            <asp:ListItem>10:30</asp:ListItem>
+                                            <asp:ListItem>11:00</asp:ListItem>
+                                            <asp:ListItem>11:30</asp:ListItem>
+                                            <asp:ListItem>14:00</asp:ListItem>
+                                            <asp:ListItem>14:30</asp:ListItem>
+                                            <asp:ListItem>15:00</asp:ListItem>
+                                            <asp:ListItem>15:30</asp:ListItem>
+                                            <asp:ListItem>16:00</asp:ListItem>
+                                            <asp:ListItem>16:30</asp:ListItem>
+                                        </asp:DropDownList>
+                                        
 					                </div>
                                 </td>
 
                                 <td>
                                     <!--cpf-->
 					                <div class="input-field col m12 s12">
-                                        <asp:TextBox ID="txtIdpaciente" runat="server" style="display:block;"></asp:TextBox>
-					                    <label for="txtIdpaciente">Paciente</label>
+                                        <asp:DropDownList ID="ddl_pacientes" runat="server" style="display:block" DataSourceID="bd_paciente" DataTextField="nome" DataValueField="cpf">
+                                        </asp:DropDownList>
+					                    <asp:SqlDataSource ID="bd_paciente" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Paciente] ORDER BY [nome]"></asp:SqlDataSource>
 					                </div>
                                 </td>
                             </tr>
@@ -86,6 +101,14 @@
         </div>
   
     <!-- End Page Container -->
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
     </div>
 
     </asp:Content>

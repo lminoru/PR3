@@ -129,3 +129,8 @@ resultado varchar(100)
 
 SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf
 SELECT [ConsultaMedica].[dia], [ConsultaMedica.horario], [Paciente.nome] FROM [ConsultaMedica], [Paciente] WHERE [ConsultaMedica.id_paciente] = [Paciente.cpf]
+
+SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf
+
+
+SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico='48302588881'
