@@ -86,5 +86,27 @@ namespace Business.Services
 
             return "adm";
         }
+
+        public String id(String email, String tabela)
+        {
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
+
+            query.Append(" SELECT u.cpf");
+            query.AppendFormat(" FROM {0} u  ", tabela);
+            query.Append(" WHERE (1=1)    ");
+            query.AppendFormat(" AND u.email = '{0}'", email);
+
+            Query executar = session.CreateQuery(query.ToString());
+            IDataReader reader = executar.ExecuteQuery();
+
+            //verificar se ele encontrou algum registro no banco de dados
+            if (reader.Read())
+            {
+                return reader["cpf"].ToString();
+            }
+
+            return "0";
+        }
     }
 }

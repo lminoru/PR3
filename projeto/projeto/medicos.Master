@@ -63,14 +63,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/Inicial">Jovem Saudável
+                    <a class="navbar-brand" runat="server" href="~/PerfilM">Jovem Saudável
                     </a>
                     
                 &nbsp;</div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/PerfilM">Página inicial</a></li>
-                        <li><a runat="server" href="~/MedicoConsulta">Consultas</a></li>
+                        <li><a runat="server" href="~/MedicoConsultas">Consultas</a></li>
                         <li><a runat="server" href="~/AtenderConsulta">Atender</a></li>
                         <li><a runat="server" href="#" onserverclick="deslogar_ServerClick">Sair</a></li>
                         

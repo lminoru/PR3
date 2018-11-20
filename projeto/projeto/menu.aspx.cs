@@ -18,7 +18,20 @@ namespace projeto
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["USUARIO_LOGIN"] != null)    //Se ja está logado, não é pra entrar aqui
-                Response.Redirect("~/Inicial.aspx"); 
+            {
+                switch (Session["CATEGORIA"])
+                {
+                    case "adm":
+                        Response.Redirect("~/Inicial.aspx"); // ~/ procurar dentro do projeto   
+                        break;
+                    case "Paciente":
+                        Response.Redirect("~/PerfilP.aspx");
+                        break;
+                    case "Medico":
+                        Response.Redirect("~/PerfilM.aspx");
+                        break;
+                }
+            }
         }
 
         protected void btn_login_Click(object sender, EventArgs e)
@@ -44,10 +57,11 @@ namespace projeto
                     user.email = txtLogin.Text; //asdsd
                     user.categoria = loginService.categoria(txtLogin.Text);
 
-                    Session["USUARIO_LOGIN"] = txtLogin.Text;
-                    Session["CATEGORIA"] = user.categoria;
+                    Session.Add("USUARIO_LOGIN", txtLogin.Text);
+                    Session.Add("CATEGORIA", user.categoria);
                     this.ExibirAlerta(Mensagem.tipoMensagem.Sucesso, "Login realizado com sucesso.");
 
+                    
                     //REDIRECIONAR PARA A PAGINA CERTA DE ACORDO COM A CATEGORIA
                     switch (user.categoria)
                     {
@@ -55,9 +69,11 @@ namespace projeto
                             Response.Redirect("~/Inicial.aspx"); // ~/ procurar dentro do projeto   
                             break;                             
                         case "Paciente":
+                            Session.Add("ID", loginService.id(txtLogin.Text, "Paciente"));
                             Response.Redirect("~/PerfilP.aspx"); 
                             break;
                         case "Medico":
+                            Session.Add("ID", loginService.id(txtLogin.Text, "Medico"));
                             Response.Redirect("~/PerfilM.aspx"); 
                             break;
                     }

@@ -12,8 +12,9 @@ namespace projeto
         protected void Page_Load(object sender, EventArgs e)
         {
             //validação de session aqui na master page
-            if (Session["USUARIO_LOGIN"] == null) //Verificar se o usuario tem acesso
+            if (Session["USUARIO_LOGIN"] == null || (!Session["CATEGORIA"].Equals("adm"))) //Verificar se o usuario tem acesso
             {
+                Session.Abandon();
                 Response.Redirect("~/menu.aspx"); // ~/ procurar dentro do projeto
             }
         }

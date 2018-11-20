@@ -13,7 +13,7 @@
                    <h1>CONSULTAS</h1>
                     <p><b>Médico</b></p>
 
-                    <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf" AutoPostBack="True">
+                    <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf" AutoPostBack="True" OnSelectedIndexChanged="ddl_medico_SelectedIndexChanged">
                     </asp:DropDownList>
 
                     <asp:SqlDataSource ID="bd_medico" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Medico]"></asp:SqlDataSource>
@@ -23,9 +23,9 @@
                     
 
                   
-                    <asp:GridView ID="gv_consultasPmedico" runat="server" AutoGenerateColumns="False" DataSourceID="bd_consulta" AllowPaging="True" AllowSorting="True">
+                    <asp:GridView ID="gv_consultasPmedico" runat="server" AutoGenerateColumns="False" DataSourceID="bd_consulta">
                         <Columns>
-                            <asp:CommandField ShowEditButton="True" ShowSelectButton="True" />
+                            <asp:CommandField ShowEditButton="True" />
                             <asp:BoundField DataField="dia" HeaderText="dia" SortExpression="dia" />
                             <asp:BoundField DataField="horario" HeaderText="horario" SortExpression="horario" />
                             <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
@@ -34,13 +34,13 @@
                    
                    
 
-                    <asp:SqlDataSource ID="bd_consulta" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico=@id_medico" UpdateCommand="UPDATE ConsultaMedica SET dia = @dia, horario = @horario WHERE (id_consulta = @id_consulta)">
+                    <asp:SqlDataSource ID="bd_consulta" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico=@id_medico" UpdateCommand="UPDATE ConsultaMedica SET ConsultaMedica.horario = @horario, ConsultaMedica.dia = @dia WHERE ConsultaMedica.id_consulta = @id_consulta">
                        <SelectParameters>
                            <asp:ControlParameter ControlID="ddl_medico" Name="id_medico" PropertyName="SelectedValue" />
                        </SelectParameters>
                         <UpdateParameters>
-                            <asp:Parameter Name="dia" />
                             <asp:Parameter Name="horario" />
+                            <asp:Parameter Name="dia" />
                             <asp:Parameter Name="id_consulta" />
                         </UpdateParameters>
                    </asp:SqlDataSource>
@@ -60,7 +60,7 @@
                                     <!--horario-->
 					                <div class="input-field col m12 s12">
                                         
-					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" EnableViewState="False" AutoPostBack="True" Enabled="False">
+					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" EnableViewState="False" Enabled="False">
                                             <asp:ListItem>09:00</asp:ListItem>
                                             <asp:ListItem>09:30</asp:ListItem>
                                             <asp:ListItem>10:00</asp:ListItem>
@@ -81,7 +81,7 @@
                                 <td>
                                     <!---paciente-->
 					                <div class="input-field col m12 s12">
-                                        <asp:DropDownList ID="ddl_pacientes" runat="server" style="display:block" DataSourceID="bd_paciente" DataTextField="nome" DataValueField="cpf" AutoPostBack="True">
+                                        <asp:DropDownList ID="ddl_pacientes" runat="server" style="display:block" DataSourceID="bd_paciente" DataTextField="nome" DataValueField="cpf">
                                         </asp:DropDownList>
 					                    <asp:SqlDataSource ID="bd_paciente" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Paciente] ORDER BY [nome]"></asp:SqlDataSource>
 					                </div>
