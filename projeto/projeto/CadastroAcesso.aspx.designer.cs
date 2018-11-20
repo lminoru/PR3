@@ -85,13 +85,13 @@ namespace projeto {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmarSenha;
         
         /// <summary>
-        /// Controle FileUpload1.
+        /// Controle fu_foto.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload fu_foto;
         
         /// <summary>
         /// Controle btn_cadastrarAcesso.

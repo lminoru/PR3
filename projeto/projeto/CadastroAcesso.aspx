@@ -84,11 +84,11 @@
                             </tr>
 
                             <tr>
-                                <td>
+                                <td style="width: 50%;"> <!-- são dois inputs, mas o espaço dever de um input (50%)-->
                                     <!--foto-->
 					                <div class="input-field col m12 s12">
                                         
-					                    <asp:FileUpload ID="FileUpload1" runat="server" />
+					                    <asp:FileUpload ID="fu_foto" runat="server" />
                                         
 					                </div>
                                 </td>

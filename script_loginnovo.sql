@@ -103,8 +103,8 @@ nome varchar(100) not null
 )
 
 insert into Exame values (
-'fez_001',
-'Exame de fezes normal'
+'NENHUM_',
+'Nenhum exame necessário'
 )
 
 create table Diagnostico(
@@ -113,6 +113,10 @@ estado varchar(10) not null,
 remedios varchar(50),
 doenca varchar(50)
 )
+
+insert into Diagnostico values ( 0, '', '', '')
+
+select * from Diagnostico
 
 create table ConsultaExame(
 id_consultaexame int primary key IDENTITY(1,1) not null,
@@ -134,3 +138,5 @@ SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMe
 
 
 SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico='48302588881'
+
+select * from ConsultaMedica

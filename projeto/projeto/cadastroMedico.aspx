@@ -94,11 +94,11 @@
 
 					            </div>
                             </td>
-                            <td>
+                            <td style="width: 50%;"> <!-- são dois inputs, mas o espaço dever de um input (50%)-->
                                 <!--foto-->
-					            <div class="input-field col m12 s12">
+					            <div class="input-field col m12 s12">  
                                         
-					                <asp:FileUpload ID="FileUpload1" runat="server" />
+					                <asp:FileUpload ID="fu_foto" runat="server"/> 
                                         
 					            </div>
                             </td>
@@ -128,5 +128,5 @@
     <!-- End Page Container -->
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Especialidade] ORDER BY [nome]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Especialidade] ORDER BY [nome]" ProviderName="<%$ ConnectionStrings:csBanco.ProviderName %>"></asp:SqlDataSource>
 </asp:Content>

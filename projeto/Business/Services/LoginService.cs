@@ -63,5 +63,28 @@ namespace Business.Services
             }
 
         }
+
+        //devolve algo
+        public String categoria(String email)
+        {
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
+
+            query.Append(" SELECT u.categoria");
+            query.Append(" FROM Acesso u  ");
+            query.Append(" WHERE (1=1)    ");
+            query.AppendFormat(" AND u.email = '{0}'", email);
+
+            Query executar = session.CreateQuery(query.ToString());
+            IDataReader reader = executar.ExecuteQuery();
+
+            //verificar se ele encontrou algum registro no banco de dados
+            if (reader.Read())
+            {
+                return reader["categoria"].ToString();
+            }
+
+            return "adm";
+        }
     }
 }

@@ -42,10 +42,26 @@ namespace projeto
                 {
                     ACESSO user = new ACESSO();
                     user.email = txtLogin.Text; //asdsd
+                    user.categoria = loginService.categoria(txtLogin.Text);
 
                     Session["USUARIO_LOGIN"] = txtLogin.Text;
+                    Session["CATEGORIA"] = user.categoria;
                     this.ExibirAlerta(Mensagem.tipoMensagem.Sucesso, "Login realizado com sucesso.");
-                    Response.Redirect("~/Inicial.aspx"); // ~/ procurar dentro do projeto
+
+                    //REDIRECIONAR PARA A PAGINA CERTA DE ACORDO COM A CATEGORIA
+                    switch (user.categoria)
+                    {
+                        case "adm":
+                            Response.Redirect("~/Inicial.aspx"); // ~/ procurar dentro do projeto   
+                            break;                             
+                        case "Paciente":
+                            Response.Redirect("~/PerfilP.aspx"); 
+                            break;
+                        case "Medico":
+                            Response.Redirect("~/PerfilM.aspx"); 
+                            break;
+                    }
+                    
                 }
                 else
                 {

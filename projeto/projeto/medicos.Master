@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="projeto.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="medicos.master.cs" Inherits="projeto.medicos" %>
+
 <!-- -- script content ---------------------------------------------------------------------------------------- -->
 <!--<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">-->
 <link rel="stylesheet" href="css/estilo0982.css" >
@@ -68,11 +69,9 @@
                 &nbsp;</div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Inicial">Página inicial</a></li>
-                        <li><a runat="server" href="~/CadastroAcesso">Cadastrar</a></li>
-                        <li><a runat="server" href="~/CadastroMedico">Medico</a></li>
-                        <li><a runat="server" href="~/CadastroEspecialidade">Especialidade</a></li>
-                        <li><a runat="server" href="~/CadastrarConsulta">Consulta</a></li>
+                        <li><a runat="server" href="~/PerfilM">Página inicial</a></li>
+                        <li><a runat="server" href="~/MedicoConsulta">Consultas</a></li>
+                        <li><a runat="server" href="~/AtenderConsulta">Atender</a></li>
                         <li><a runat="server" href="#" onserverclick="deslogar_ServerClick">Sair</a></li>
                         
                         

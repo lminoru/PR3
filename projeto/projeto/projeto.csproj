@@ -136,10 +136,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="css\estilo.css" />
+    <Content Include="css\estilo0982.css" />
     <Content Include="css\estilo2.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\login.css" />
-    <Content Include="css\materialize.min.css" />
     <Content Include="depoisLogin.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -155,6 +155,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.svgv" />
+    <Content Include="MedicoConsultas.aspx" />
+    <Content Include="medicos.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="imagens\et.jpg" />
     <Content Include="imagens\logo_hospital.png" />
@@ -164,6 +166,7 @@
     <Content Include="js\login.js" />
     <Content Include="cadastro.aspx" />
     <Content Include="menu.aspx" />
+    <Content Include="PerfilM.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -252,6 +255,20 @@
     <Compile Include="Inicial.aspx.designer.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MedicoConsultas.aspx.cs">
+      <DependentUpon>MedicoConsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicoConsultas.aspx.designer.cs">
+      <DependentUpon>MedicoConsultas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicos.Master.cs">
+      <DependentUpon>medicos.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicos.Master.designer.cs">
+      <DependentUpon>medicos.Master</DependentUpon>
+    </Compile>
     <Compile Include="Mensagem.cs" />
     <Compile Include="cadastro.aspx.cs">
       <DependentUpon>cadastro.aspx</DependentUpon>
@@ -266,6 +283,13 @@
     </Compile>
     <Compile Include="menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilM.aspx.cs">
+      <DependentUpon>PerfilM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilM.aspx.designer.cs">
+      <DependentUpon>PerfilM.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

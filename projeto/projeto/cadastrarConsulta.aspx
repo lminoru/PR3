@@ -11,6 +11,7 @@
                 <CENTER>
 
                    <h1>CONSULTAS</h1>
+                    <p><b>Médico</b></p>
 
                     <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf" AutoPostBack="True">
                     </asp:DropDownList>
@@ -22,18 +23,28 @@
                     
 
                   
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="bd_consulta">
+                    <asp:GridView ID="gv_consultasPmedico" runat="server" AutoGenerateColumns="False" DataSourceID="bd_consulta" AllowPaging="True" AllowSorting="True">
                         <Columns>
-                            <asp:BoundField DataField="dia" DataFormatString="{0: dd/MM/yyyy}" HeaderText="dia" SortExpression="dia" />
+                            <asp:CommandField ShowEditButton="True" ShowSelectButton="True" />
+                            <asp:BoundField DataField="dia" HeaderText="dia" SortExpression="dia" />
                             <asp:BoundField DataField="horario" HeaderText="horario" SortExpression="horario" />
-                            <asp:BoundField DataField="nome" HeaderText="paciente" SortExpression="nome" />
+                            <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
                         </Columns>
                    </asp:GridView>
-                   <asp:SqlDataSource ID="bd_consulta" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico=@id_medico">
+                   
+                   
+
+                    <asp:SqlDataSource ID="bd_consulta" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT ConsultaMedica.dia, ConsultaMedica.horario, Paciente.nome FROM ConsultaMedica, Paciente WHERE ConsultaMedica.id_paciente = Paciente.cpf and ConsultaMedica.id_medico=@id_medico" UpdateCommand="UPDATE ConsultaMedica SET dia = @dia, horario = @horario WHERE (id_consulta = @id_consulta)">
                        <SelectParameters>
                            <asp:ControlParameter ControlID="ddl_medico" Name="id_medico" PropertyName="SelectedValue" />
                        </SelectParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="dia" />
+                            <asp:Parameter Name="horario" />
+                            <asp:Parameter Name="id_consulta" />
+                        </UpdateParameters>
                    </asp:SqlDataSource>
+                   
                     
                    <table>
                             <tr>
@@ -99,18 +110,5 @@
         </div>
   
     <!-- End Page Container -->
-    </div>
-
-    </div>
-
-    </div>
-
-    </div>
-
-    </div>
-
-    </div>
-
-    </div>
 
     </asp:Content>

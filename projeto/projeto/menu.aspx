@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menu.aspx.cs" Inherits="projeto.menu" %>
-<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">
+<!--<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">-->
+<link rel="stylesheet" href="css/estilo0982.css">
 <script src="js/materialize.min.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script>
 
