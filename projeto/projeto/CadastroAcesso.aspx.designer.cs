@@ -67,13 +67,13 @@ namespace projeto {
         protected global::System.Web.UI.WebControls.TextBox txt_password;
         
         /// <summary>
-        /// Controle txtCategoria.
+        /// Controle fu_foto.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoria;
+        protected global::System.Web.UI.WebControls.FileUpload fu_foto;
         
         /// <summary>
         /// Controle txtConfirmarSenha.
@@ -83,15 +83,6 @@ namespace projeto {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtConfirmarSenha;
-        
-        /// <summary>
-        /// Controle fu_foto.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_foto;
         
         /// <summary>
         /// Controle btn_cadastrarAcesso.

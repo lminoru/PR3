@@ -54,6 +54,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -129,6 +130,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AtenderConsulta.aspx" />
+    <Content Include="Avaliar.aspx" />
     <Content Include="cadastrarConsulta.aspx" />
     <Content Include="CadastroAcesso.aspx" />
     <Content Include="CadastroEspecialidade.aspx" />
@@ -142,6 +144,8 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\login.css" />
     <Content Include="depoisLogin.aspx" />
+    <Content Include="DiagnosticoM.aspx" />
+    <Content Include="DiagnosticoP.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -158,6 +162,7 @@
     <Content Include="fonts\fontawesome-webfont.svgv" />
     <Content Include="MedicoConsultas.aspx" />
     <Content Include="medicos.Master" />
+    <Content Include="pacientes.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="imagens\et.jpg" />
     <Content Include="imagens\logo_hospital.png" />
@@ -168,6 +173,7 @@
     <Content Include="cadastro.aspx" />
     <Content Include="menu.aspx" />
     <Content Include="PerfilM.aspx" />
+    <Content Include="PerfilP.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -218,6 +224,13 @@
     <Compile Include="AtenderConsulta.aspx.designer.cs">
       <DependentUpon>AtenderConsulta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Avaliar.aspx.cs">
+      <DependentUpon>Avaliar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Avaliar.aspx.designer.cs">
+      <DependentUpon>Avaliar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cadastrarConsulta.aspx.cs">
       <DependentUpon>cadastrarConsulta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -253,6 +266,20 @@
     </Compile>
     <Compile Include="depoisLogin.aspx.designer.cs">
       <DependentUpon>depoisLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosticoM.aspx.cs">
+      <DependentUpon>DiagnosticoM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiagnosticoM.aspx.designer.cs">
+      <DependentUpon>DiagnosticoM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosticoP.aspx.cs">
+      <DependentUpon>DiagnosticoP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiagnosticoP.aspx.designer.cs">
+      <DependentUpon>DiagnosticoP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -293,12 +320,26 @@
     <Compile Include="menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pacientes.Master.cs">
+      <DependentUpon>pacientes.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pacientes.Master.designer.cs">
+      <DependentUpon>pacientes.Master</DependentUpon>
+    </Compile>
     <Compile Include="PerfilM.aspx.cs">
       <DependentUpon>PerfilM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PerfilM.aspx.designer.cs">
       <DependentUpon>PerfilM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilP.aspx.cs">
+      <DependentUpon>PerfilP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilP.aspx.designer.cs">
+      <DependentUpon>PerfilP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

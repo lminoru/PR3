@@ -225,7 +225,8 @@ namespace Business.Services
             query.AppendFormat(" '{0}', ", horario);
             query.AppendFormat(" '{0}', ", "PENDENTE");
             query.AppendFormat(" '{0}', ", "NENHUM_");
-            query.AppendFormat("  {0}) ", 0);
+            query.AppendFormat("  {0}, ", 0);
+            query.AppendFormat(" '{0}') ", "NA");
 
             Query executar = session.CreateQuery(query.ToString());
 
@@ -272,8 +273,83 @@ namespace Business.Services
             return ocupados;
         }
 
+        public String pesquisarPaciente(String email, String dia, String horario)
+        {
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
 
-        
+            query.Append(" SELECT u.nome");
+            query.Append(" FROM Paciente u ");
+            query.Append(" WHERE (1=1)    ");
+            query.Append(" AND u.cpf IN (");
+            query.Append(" SELECT c.id_paciente ");
+            query.Append(" FROM ConsultaMedica c ");
+            query.Append(" WHERE (1=1)    ");
+            query.AppendFormat(" AND c.dia = '{0}'     ", dia);
+            query.AppendFormat(" AND c.horario = '{0}' ", horario);
+            query.Append(" AND c.id_medico IN (");
+            query.Append(" SELECT m.cpf ");
+            query.Append(" FROM Medico m ");
+            query.Append(" WHERE (1=1)    ");
+            query.AppendFormat(" AND m.email = '{0}' ))", email);
+
+            Query executar = session.CreateQuery(query.ToString());
+            IDataReader reader = executar.ExecuteQuery();
+
+            //verificar se ele encontrou algum registro no banco de dados
+            if (reader.Read())
+            {
+                return reader["nome"].ToString();
+            }
+
+            return "000";
+        }
+
+        public String cpfMedico(String email)
+        {
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
+
+            query.Append(" SELECT m.cpf");
+            query.Append(" FROM Medico m ");
+            query.Append(" WHERE (1=1)  AND ");
+            query.AppendFormat(" m.email = '{0}'     ", email);
+
+            Query executar = session.CreateQuery(query.ToString());
+            IDataReader reader = executar.ExecuteQuery();
+
+            //verificar se ele encontrou algum registro no banco de dados
+            if (reader.Read())
+            {
+                return reader["cpf"].ToString();
+            }
+
+            return "000";
+        }
+
+        public String cpfPaciente(String email)
+        {
+            StringBuilder query = new StringBuilder();
+            var session = new DBSession();
+
+            query.Append(" SELECT m.cpf");
+            query.Append(" FROM Paciente m ");
+            query.Append(" WHERE (1=1)  AND ");
+            query.AppendFormat(" m.email = '{0}'     ", email);
+
+            Query executar = session.CreateQuery(query.ToString());
+            IDataReader reader = executar.ExecuteQuery();
+
+            //verificar se ele encontrou algum registro no banco de dados
+            if (reader.Read())
+            {
+                return reader["cpf"].ToString();
+            }
+
+            return "000";
+        }
+
+
 
 
     }

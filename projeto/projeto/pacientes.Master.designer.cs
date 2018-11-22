@@ -10,24 +10,15 @@
 namespace projeto {
     
     
-    public partial class PerfilM {
+    public partial class pacientes {
         
         /// <summary>
-        /// Controle GridView1.
+        /// Controle MainContent.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// Controle bd_perfilM.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource bd_perfilM;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
     }
 }

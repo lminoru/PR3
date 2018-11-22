@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="medicos.master.cs" Inherits="projeto.medicos" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="pacientes.master.cs" Inherits="projeto.pacientes" %>
 
 <!-- -- script content ---------------------------------------------------------------------------------------- -->
 <!--<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">-->
@@ -69,10 +69,9 @@
                 &nbsp;</div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/PerfilM">Página inicial</a></li>
-                        <li><a runat="server" href="~/MedicoConsultas">Consultas</a></li>
-                        <li><a runat="server" href="~/AtenderConsulta">Atender</a></li>
-                        <li><a runat="server" href="~/DiagnosticoM">Diagnostico</a></li>
+                        <li><a runat="server" href="~/PerfilP">Página inicial</a></li>
+                        <li><a runat="server" href="~/Avaliar">Avaliar</a></li>
+                        <li><a runat="server" href="~/DiagnosticoP">Diagnosticos</a></li>
                         <li><a runat="server" href="#" onserverclick="deslogar_ServerClick">Sair</a></li>
                         
                         

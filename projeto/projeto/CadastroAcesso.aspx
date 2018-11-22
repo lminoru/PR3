@@ -41,7 +41,7 @@
                                 <td>
                                     <!--telefone-->
 					                <div class="input-field col m12 s12">
-                                        <asp:TextBox ID="txt_telefone" class="validate" runat="server" TabIndex="2"></asp:TextBox>
+                                        <asp:TextBox ID="txt_telefone" class="validate" runat="server" TabIndex="2" TextMode="Phone"></asp:TextBox>
 					                    <label for="txt_telefone">Telefone</label>
 					                </div>
                                 </td>
@@ -51,7 +51,7 @@
                                 <td>
                                     <!--login-->  
 					                <div class="input-field col m12 s12">
-					                    <asp:TextBox ID="txt_login" class="validate" runat="server" TabIndex="1"></asp:TextBox>
+					                    <asp:TextBox ID="txt_login" class="validate" runat="server" TabIndex="1" TextMode="Email"></asp:TextBox>
                                         <label for="txt_login">Nome de email</label>
 					                </div>
                                 </td>
@@ -66,11 +66,12 @@
                             </tr>
 
                             <tr>
-                                <td>
-                                    <!--categoria-->
+                                <td style="width: 50%;"> <!-- são dois inputs, mas o espaço dever de um input (50%)-->
+                                    <!--foto-->
 					                <div class="input-field col m12 s12">
-                                        <asp:TextBox ID="txtCategoria" class="validate" runat="server" TabIndex="2"></asp:TextBox>
-					                    <label for="txtCategoria">Categoria</label>
+                                        
+					                    <asp:FileUpload ID="fu_foto" runat="server" />
+                                        
 					                </div>
                                 </td>
 
@@ -79,17 +80,6 @@
 					                <div class="input-field col m12 s12">
                                         <asp:TextBox ID="txtConfirmarSenha" TextMode="password" class="validate" runat="server" TabIndex="4"></asp:TextBox>
 					                    <label for="txt_password">Confimar Senha</label>
-					                </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 50%;"> <!-- são dois inputs, mas o espaço dever de um input (50%)-->
-                                    <!--foto-->
-					                <div class="input-field col m12 s12">
-                                        
-					                    <asp:FileUpload ID="fu_foto" runat="server" />
-                                        
 					                </div>
                                 </td>
                             </tr>

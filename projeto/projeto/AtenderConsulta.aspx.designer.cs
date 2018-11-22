@@ -13,48 +13,66 @@ namespace projeto {
     public partial class AtenderConsulta {
         
         /// <summary>
-        /// Controle lbDia.
+        /// Controle label1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDia;
+        protected global::System.Web.UI.WebControls.Label label1;
         
         /// <summary>
-        /// Controle lbHorario.
+        /// Controle lbPaciente.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbHorario;
+        protected global::System.Web.UI.WebControls.Label lbPaciente;
         
         /// <summary>
-        /// Controle DetailsView1.
+        /// Controle txtDia.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        protected global::System.Web.UI.WebControls.TextBox txtDia;
         
         /// <summary>
-        /// Controle bd_atendimento.
+        /// Controle txtHorario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource bd_atendimento;
+        protected global::System.Web.UI.WebControls.TextBox txtHorario;
         
         /// <summary>
-        /// Controle btn_consulta.
+        /// Controle btn_pesquisar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_consulta;
+        protected global::System.Web.UI.WebControls.Button btn_pesquisar;
+        
+        /// <summary>
+        /// Controle GridView1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// Controle bd_atend.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource bd_atend;
     }
 }

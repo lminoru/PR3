@@ -10,7 +10,7 @@
 namespace projeto {
     
     
-    public partial class PerfilM {
+    public partial class DiagnosticoP {
         
         /// <summary>
         /// Controle GridView1.
@@ -22,12 +22,12 @@ namespace projeto {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// Controle bd_perfilM.
+        /// Controle bd_diag.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource bd_perfilM;
+        protected global::System.Web.UI.WebControls.SqlDataSource bd_diag;
     }
 }

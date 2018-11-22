@@ -6,14 +6,15 @@
 
         <!-- The Grid -->
         <div class="w3-row-padding">
+            <h1>CONSULTAS</h1>
+            <br />
             <!-- CADASTRAR -->
             <div class="w3-container w3-card w3-white w3-margin-bottom">
                 <CENTER>
 
-                   <h1>CONSULTAS</h1>
                     <p><b>Médico</b></p>
 
-                    <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf" AutoPostBack="True" OnSelectedIndexChanged="ddl_medico_SelectedIndexChanged">
+                    <asp:DropDownList ID="ddl_medico" runat="server" style="display: block;" DataSourceID="bd_medico" DataTextField="nome" DataValueField="cpf" AutoPostBack="True" OnTextChanged="ddl_medico_TextChanged">
                     </asp:DropDownList>
 
                     <asp:SqlDataSource ID="bd_medico" runat="server" ConnectionString="<%$ ConnectionStrings:csBanco %>" SelectCommand="SELECT * FROM [Medico]"></asp:SqlDataSource>
@@ -26,9 +27,9 @@
                     <asp:GridView ID="gv_consultasPmedico" runat="server" AutoGenerateColumns="False" DataSourceID="bd_consulta">
                         <Columns>
                             <asp:CommandField ShowEditButton="True" />
-                            <asp:BoundField DataField="dia" HeaderText="dia" SortExpression="dia" />
-                            <asp:BoundField DataField="horario" HeaderText="horario" SortExpression="horario" />
-                            <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
+                            <asp:BoundField DataField="dia" HeaderText="Dia" SortExpression="dia" />
+                            <asp:BoundField DataField="horario" HeaderText="Horário" SortExpression="horario" />
+                            <asp:BoundField DataField="nome" HeaderText="Paciente" SortExpression="nome" />
                         </Columns>
                    </asp:GridView>
                    
@@ -60,7 +61,7 @@
                                     <!--horario-->
 					                <div class="input-field col m12 s12">
                                         
-					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" EnableViewState="False" Enabled="False">
+					                    <asp:DropDownList ID="ddl_horarios" runat="server" style="display:block" Enabled="False">
                                             <asp:ListItem>09:00</asp:ListItem>
                                             <asp:ListItem>09:30</asp:ListItem>
                                             <asp:ListItem>10:00</asp:ListItem>

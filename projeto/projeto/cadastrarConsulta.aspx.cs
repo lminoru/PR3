@@ -60,7 +60,7 @@ namespace projeto
 
         protected void btn_consulta_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDateTime(txtDia.Text) >= DateTime.Now.Date )
+            if (txtDia.Text == "" || Convert.ToDateTime(txtDia.Text) >= DateTime.Now.Date )
             {
                 //data validada
                 if (ddl_horarios.Enabled == true)
@@ -87,12 +87,16 @@ namespace projeto
             }
         }
 
-        protected void ddl_medico_SelectedIndexChanged(object sender, EventArgs e)
+
+        protected void ddl_medico_TextChanged(object sender, EventArgs e)
         {
-            txtDia.Text = null;
+
             ddl_pacientes.ClearSelection();
             ddl_horarios.ClearSelection();
             zerarDDL_horarios();
+            
+                
         }
+
     }
 }
